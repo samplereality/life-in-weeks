@@ -9,7 +9,7 @@
 - class_name: "brooklyn"
   element: "border"
   color_name: "#8eb2d6"
-- class_name: "san-diego"
+- class_name: "green"
   element: "border"
   color_name: "#FCC737"
 - class_name: "north-carolina"
