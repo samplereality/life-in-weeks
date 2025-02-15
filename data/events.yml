@@ -22,14 +22,14 @@
       doing: "Student"
       association: "St. E"
 
-"1984-04-01":
+"1982-04-01":
     - headline: "🖥️ First computer"
       description: "TRS-80 Color Computer."
 
-"1989-09-01":
+"1985-09-01":
     - headline: "📚 High school"
-      description: "All girls Catholic high schoool, where my sister went."
-      based: "Brooklyn"
+      description: "Green High School."
+      based: "Green"
       doing: "High school student"
       association: "BKHS"
 
