@@ -33,6 +33,13 @@
       doing: "High school student"
       association: "BKHS"
 
+"1989-09-01":
+  - headline: "🏫 College"
+    description: "Miami University of Ohio."
+    based: "Miami"
+    doing: "College student"
+    association: "Miami"
+
 "1989-11-23":
     - headline: "🎫 First concert"
       description: "New Kids on the Block at Madison Square Garden. Whole school won tickets in an NYC radio contest by writing the most index cards of any other school in the 5 boroughs."

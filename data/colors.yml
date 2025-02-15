@@ -12,7 +12,7 @@
 - class_name: "green"
   element: "border"
   color_name: "#FCC737"
-- class_name: "north-carolina"
+- class_name: "miami"
   element: "border"
   color_name: "#118B50"
 - class_name: "poughkeepsie"
