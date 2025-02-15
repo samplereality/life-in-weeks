@@ -14,12 +14,12 @@ jobs:
         uses: peaceiris/actions-hugo@v2
         with:
           hugo-version: "latest"
-          extended: true # Ensures the extended version is installed
+          extended: true
 
       - name: 🏗️ Build the Hugo site
         run: hugo --minify
 
-      - name: 📂 Deploy via FTP
+      - name: 📂 Deploy via FTPS (TLS)
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_HOST }}
@@ -27,3 +27,5 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./public/
           server-dir: /
+          protocol: ftps # ✅ Forces secure FTPS (TLS)
+          port: 21 # Default FTPS port
