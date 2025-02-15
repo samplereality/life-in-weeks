@@ -10,17 +10,11 @@ jobs:
       - name: 🚚 Get latest code
         uses: actions/checkout@v4
 
-      - name: Install Hugo
-        run: sudo apt-get install hugo
-
-      - name: Build Hugo site
-        run: hugo --minify
-
       - name: 📂 Sync files
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: public/
+          local-dir: ./public/
           server-dir: /weeks.samplereality.com/
