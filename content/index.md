@@ -1,7 +1,7 @@
 ---
 title       : My Life in Weeks
 start_date	: 1971-06-23
-end_year    : 2026
+end_year    : 1989
 ---
 
 👋 Hi, I'm [Mark](https://www.samplereality.com). This is a map of my life, where each week I've been alive is a little box. Tap a box to see what I was doing where that week.
