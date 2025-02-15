@@ -1,8 +1,11 @@
-name: Deploy Hugo Site
+name: Deploy Content Folder
 on:
   push:
     branches:
       - main
+    paths:
+      - "content/**" # Only trigger when files in "content/" change
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -10,19 +13,11 @@ jobs:
       - name: 🚚 Get latest code
         uses: actions/checkout@v4
 
-      - name: ⚡ Install Hugo
-        uses: peaceiris/actions-hugo@v2
-        with:
-          hugo-version: "latest"
-
-      - name: 🏗️ Build the Hugo site
-        run: hugo --minify
-
-      - name: 📂 Sync files
+      - name: 📂 Upload `content/` via FTP
         uses: SamKirkland/FTP-Deploy-Action@v4.3.5
         with:
           server: ${{ secrets.FTP_HOST }}
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          local-dir: ./public/
+          local-dir: ./content/
           server-dir: /
